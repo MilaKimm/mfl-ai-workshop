@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/education/instruction", "destination": "/education.html" }
+  ]
+}
