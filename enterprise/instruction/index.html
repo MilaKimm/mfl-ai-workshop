@@ -156,7 +156,9 @@
   /* gallery */
   .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:28px;height:clamp(180px,26vh,260px);}
   .gallery img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block;}
-  .tnums{display:flex;gap:clamp(24px,5vw,56px);margin-top:30px;flex-wrap:wrap;}
+  .tnums{display:flex;justify-content:center;gap:clamp(28px,6vw,72px);margin-top:32px;flex-wrap:wrap;text-align:center;}
+  .partners-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .ps-logos.pg2{grid-template-columns:1fr 1fr;}
   .tnum .n{font-size:clamp(28px,3.4vw,46px);font-weight:800;color:var(--primary);line-height:1;letter-spacing:-.02em;}
   .tnum .n em{font-size:.5em;font-style:normal;font-weight:700;}
   .tnum .l{font-size:13.5px;color:var(--body);margin-top:8px;font-weight:500;}
@@ -246,10 +248,10 @@
       <div class="eyebrow">On the ground</div>
       <h2 class="title">이미 많은 기업·기관이 <span class="pt">현장에서 경험</span>했습니다</h2>
       <div class="gallery">
-        <img src="/replclub2.jpg" alt="현장 1" />
-        <img src="/case_hyundai.jpg" alt="현장 2" />
-        <img src="/replclub4.jpg" alt="현장 3" />
-        <img src="/oba.jpg" alt="현장 4" />
+        <img src="/replclub2.jpg" alt="Repl Club 현장" />
+        <img src="/replclub3.jpg" alt="Repl Club 현장" />
+        <img src="/oba1.jpg" alt="OBA 위켄드톤 현장" />
+        <img src="/oba.jpg" alt="OBA 위켄드톤 현장" />
       </div>
       <div class="tnums">
         <div class="tnum"><div class="n">250<em>+</em></div><div class="l">함께한 기업·기관</div></div>
@@ -282,7 +284,6 @@
     <div class="pagenum">05</div>
     <div class="slide-inner">
       <div class="pillartag">쉽게</div>
-      <img class="proglogo" src="/replit2.png" alt="Replit" />
       <h2 class="title">코드 없이, <span class="pt">말로 만듭니다</span></h2>
       <p class="lead">원하는 기능을 말로 설명하면 AI가 앱을 만들어 줍니다. 마켓핏랩은 Replit 공식 파트너사로서 온보딩 교육과 라이선스를 함께 제공합니다.</p>
       <div class="rstats">
@@ -335,13 +336,20 @@
           </ul>
         </div>
       </div>
-      <div class="partners-strip">
-        <div class="ps-label">Partners</div>
-        <div class="ps-logos">
-          <div class="lg"><img src="/p_hyundai.png" alt="현대" /></div>
-          <div class="lg"><img src="/p_lge.png" alt="LG전자" /></div>
-          <div class="lg"><img src="/p_replit.png" alt="Replit" /></div>
-          <div class="lg"><img src="/p_articul8.png" alt="Articul8" /></div>
+      <div class="partners-strip partners-2col">
+        <div>
+          <div class="ps-label">공식 한국 파트너</div>
+          <div class="ps-logos pg2">
+            <div class="lg"><img src="/p_replit.png" alt="Replit" /></div>
+            <div class="lg"><img src="/p_articul8.png" alt="Articul8" /></div>
+          </div>
+        </div>
+        <div>
+          <div class="ps-label">고객사</div>
+          <div class="ps-logos pg2">
+            <div class="lg"><img src="/p_hyundai.png" alt="현대자동차" /></div>
+            <div class="lg"><img src="/p_lge.png" alt="LG전자" /></div>
+          </div>
         </div>
       </div>
     </div>
@@ -460,9 +468,9 @@
     <div class="slide-inner">
       <div class="eyebrow">Case 01</div>
       <h2 class="title">기업 사내 워크샵 <span class="pt">H사 · N사</span></h2>
-      <div class="case">
+      <div class="case" style="grid-template-columns:1fr;">
         <div class="case-info">
-          <div class="case-meta">
+          <div class="case-meta" style="grid-template-columns:repeat(4,1fr);">
             <div class="chip"><span>유형</span><b>사내 워크샵 / 해커톤</b></div>
             <div class="chip"><span>대상</span><b>책임·매니저 등 임직원</b></div>
             <div class="chip"><span>소요 시간</span><b>4시간</b></div>
@@ -475,7 +483,6 @@
             <div class="quote">"입사 이래 가장 도움되고 흥미로운 교육. 코딩을 직접 하지 않아도 프로그램을 만들 수 있다는 점이 놀라웠다."</div>
           </div>
         </div>
-        <div class="case-photo"><img src="/case_hyundai.jpg" alt="기업 사내 워크샵 현장" /></div>
       </div>
     </div>
   </section>
