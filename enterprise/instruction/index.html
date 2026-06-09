@@ -52,16 +52,15 @@
   .card.hl .k{color:#ffd9c2;} .card.hl h3{color:#fff;} .card.hl p{color:#ffe7d8;}
   .card .cicon{width:50px;height:50px;border-radius:13px;background:rgba(242,98,7,.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--primary);}
   .card .cicon svg{width:27px;height:27px;}
-  .cur-card{display:flex;gap:16px;align-items:flex-start;padding:18px 22px;}
+  .cur-card{display:flex;gap:16px;align-items:center;padding:18px 22px;}
   .cur-card .cicon{flex:0 0 46px;width:46px;height:46px;margin-bottom:0;border-radius:12px;}
   .cur-card .cicon svg{width:24px;height:24px;}
   .cur-card .k{margin-bottom:4px;}
   .cur-card h3{margin-bottom:4px;}
   .cur-card p{font-size:13.5px;line-height:1.55;}
-  .tools-strip{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--border);border-radius:14px;padding:13px 20px;background:var(--bg-soft);}
+  .tools-strip{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--border);border-radius:14px;padding:14px 22px;background:var(--bg-soft);}
   .tools-strip .tlabel{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--primary);text-transform:uppercase;white-space:nowrap;}
-  .tools-strip .tchips{display:flex;gap:8px;flex-wrap:wrap;}
-  .tchip{font-size:13px;font-weight:600;color:#3F4A5A;background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 13px;}
+  .tools-strip .ttext{font-size:14px;font-weight:500;color:#3F4A5A;line-height:1.5;}
 
   .stats{display:grid;gap:18px;margin-top:38px;}
   .stats.s3{grid-template-columns:repeat(3,1fr);}
@@ -93,8 +92,8 @@
   .ps-label{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
   .ps-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:center;}
   .ps-logos.pg2{grid-template-columns:1fr 1fr;}
-  .ps-logos .lg{background:#fff;border:1px solid var(--border);border-radius:12px;height:68px;display:flex;align-items:center;justify-content:center;padding:10px;}
-  .ps-logos .lg img{max-width:100%;max-height:28px;object-fit:contain;filter:grayscale(1);opacity:.72;}
+  .ps-logos .lg{background:#fff;border:1px solid var(--border);border-radius:12px;height:68px;display:flex;align-items:center;justify-content:center;padding:8px 14px;}
+  .ps-logos .lg img{max-width:100%;max-height:42px;object-fit:contain;filter:grayscale(1);opacity:.78;}
 
   .icard{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px 22px;}
   .icard h3{font-size:18px;font-weight:700;color:var(--ink);}
@@ -148,6 +147,7 @@
   .tb-nav{display:flex;gap:4px;margin-left:auto;}
   .tb-nav a{font-size:14px;font-weight:600;color:var(--body);padding:8px 12px;border-radius:8px;cursor:pointer;white-space:nowrap;transition:.15s;}
   .tb-nav a:hover{color:var(--primary);background:rgba(242,98,7,.08);}
+  .tb-nav a.active{color:var(--primary);background:rgba(242,98,7,.12);font-weight:700;}
   .tb-pdf{margin-left:8px;font-size:13.5px;font-weight:700;color:#fff;background:var(--primary);border:none;border-radius:8px;padding:9px 16px;cursor:pointer;white-space:nowrap;transition:.15s;}
   .tb-pdf:hover{background:#d9560a;}
   .brand,.pagenum{display:none;}
@@ -282,24 +282,8 @@
     </div>
   </section>
 
-  <!-- 5 EASY 1 -->
-  <section class="slide" style="background:var(--bg-soft);" id="s-easy">
-    <div class="brand"><img src="/mfl_black.png" alt="Market Fit Lab" /></div>
-    <div class="pagenum">05</div>
-    <div class="slide-inner">
-      <div class="eyebrow">쉽게 · Easy</div>
-      <h2 class="title">코드 없이, <span class="pt">말로 만듭니다</span></h2>
-      <p class="lead">원하는 기능을 말로 설명하면 AI가 앱을 만들어 줍니다. 마켓핏랩은 Replit 공식 파트너사로서 워크샵 온보딩 교육과 라이선스를 함께 제공합니다.</p>
-      <div class="rstats">
-        <div class="rstat"><div class="num">5천<em>만+</em></div><div class="lb">전 세계 가입자 수</div><div class="sub">2026년 기준</div></div>
-        <div class="rstat"><div class="num">90<em>%</em></div><div class="lb">비개발 직군 사용자</div><div class="sub">마케터·PM·세일즈·운영</div></div>
-        <div class="rstat"><div class="num">0<em>초</em></div><div class="lb">설치·세팅</div><div class="sub">브라우저만 있으면 즉시</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6 EASY 2 curriculum -->
-  <section class="slide">
+  <!-- 5 EASY curriculum -->
+  <section class="slide" id="s-easy">
     <div class="brand"><img src="/mfl_black.png" alt="Market Fit Lab" /></div>
     <div class="pagenum">06</div>
     <div class="slide-inner">
@@ -326,7 +310,7 @@
       </div>
       <div class="tools-strip">
         <span class="tlabel">사용 AI 툴</span>
-        <span class="tchips"><span class="tchip">Replit</span><span class="tchip">Claude Code</span><span class="tchip">Claude Cowork</span><span class="tchip">Gemini</span><span class="tchip">Google AI Studio</span><span class="tchip">Higgsfield</span></span>
+        <span class="ttext">Replit · Claude Code · Claude Cowork · Gemini · Google AI Studio · Higgsfield</span>
       </div>
     </div>
   </section>
@@ -381,13 +365,13 @@
     <div class="pagenum">08</div>
     <div class="slide-inner">
       <div class="eyebrow">정확하게 · Accurate</div>
-      <h2 class="title">이론가가 아니라, <span class="pt">현업 AI 컨설턴트</span>가 진행합니다</h2>
+      <h2 class="title">비개발자 출신의 <span class="pt">AI 컨설턴트</span>가 교육합니다</h2>
       <div class="grid grid-3" style="margin-top:24px;">
         <div class="icard">
           <h3>Elan</h3>
           <p class="iintro">2010년부터 사업개발·스타트업 창업·플랫폼 운영을 경험. 현재 마켓핏랩 AX 컨설턴트로 기업·실무자의 AI 업무 적용을 돕습니다.</p>
           <div class="ilb">강의 이력</div>
-          <ul><li>H사 바이브코딩 워크숍 — 강의 (2026)</li><li>N사 바이브코딩 워크숍 — 강의 (2026)</li></ul>
+          <ul><li>현대자동차 바이브코딩 워크숍 — 강의 (2026)</li><li>넥스트증권 바이브코딩 워크숍 — 강의 (2026)</li></ul>
           <div class="ilb">주요 경력</div>
           <ul><li>현) 마켓핏랩 AX 컨설턴트</li><li>전) 페이얍 글로벌 커머스 Founder/CEO</li><li>전) 카카오 택시 사업개발 · 서울대 산업공학 학·석사</li></ul>
         </div>
@@ -395,7 +379,7 @@
           <h3>Michelle</h3>
           <p class="iintro">비개발자를 위한 AI 교육 전문 강사. 커뮤니티 매니저에서 PM으로 사용자 여정을 설계해 온 경험으로 "코드를 몰라도 AI를 도구로 쓰는 법"을 전합니다.</p>
           <div class="ilb">강의 이력</div>
-          <ul><li>H사 Replit 워크숍 — 퍼실리테이션 (2026)</li><li>N사 Claude Code·Replit 워크숍 — 퍼실리테이션 (2026)</li><li>Above Coding Club 워크숍 — 운영·강의 2회 (2026)</li></ul>
+          <ul><li>현대자동차 Replit 워크숍 — 퍼실리테이션 (2026)</li><li>넥스트증권 Claude Code·Replit 워크숍 — 퍼실리테이션 (2026)</li><li>Above Coding Club 워크숍 — 운영·강의 2회 (2026)</li></ul>
           <div class="ilb">주요 경력</div>
           <ul><li>현) 마켓핏랩 PM</li><li>전) 데브디 PO / 가지랩·루트임팩트 커뮤니티 매니저</li></ul>
         </div>
@@ -403,7 +387,7 @@
           <h3>Mila</h3>
           <p class="iintro">11년차 사업기획 PM. 광고기획사에서 IT 개발사로 커리어를 전환한 경험을 바탕으로, 비개발자 눈높이의 서비스 기획 입문을 전합니다.</p>
           <div class="ilb">강의 이력</div>
-          <ul><li>H사 Replit 워크숍 — 퍼실리테이션 (2026)</li></ul>
+          <ul><li>현대자동차 Replit 워크숍 — 퍼실리테이션 (2026)</li></ul>
           <div class="ilb">주요 경력</div>
           <ul><li>현) 마켓핏랩 PM</li><li>전) 펄스나인(AI 아이돌 제작사) PM</li><li>전) 블록오디세이(블록체인 개발사) PM</li></ul>
         </div>
@@ -586,7 +570,10 @@
   const dotsWrap=document.getElementById('dots');
   slides.forEach((s,i)=>{const b=document.createElement('button');b.addEventListener('click',()=>slides[i].scrollIntoView({behavior:'smooth'}));dotsWrap.appendChild(b);});
   const dots=[...dotsWrap.children];
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const i=slides.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('active',j===i));}});},{root:deck,threshold:0.6});
+  const navLinks=[...document.querySelectorAll('.tb-nav a')];
+  const anchorIdx=navLinks.map(a=>{const t=document.getElementById(a.dataset.go);return t?slides.indexOf(t):-1;});
+  function setActiveNav(i){let act=0;for(let k=0;k<anchorIdx.length;k++){if(anchorIdx[k]>=0&&anchorIdx[k]<=i)act=k;}navLinks.forEach((a,k)=>a.classList.toggle('active',k===act));}
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const i=slides.indexOf(e.target);dots.forEach((d,j)=>d.classList.toggle('active',j===i));setActiveNav(i);}});},{root:deck,threshold:0.6});
   slides.forEach(s=>io.observe(s));
   document.addEventListener('keydown',(e)=>{
     const cur=slides.findIndex((s,i)=>dots[i].classList.contains('active'));
