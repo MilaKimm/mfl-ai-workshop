@@ -52,6 +52,16 @@
   .card.hl .k{color:#ffd9c2;} .card.hl h3{color:#fff;} .card.hl p{color:#ffe7d8;}
   .card .cicon{width:50px;height:50px;border-radius:13px;background:rgba(242,98,7,.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--primary);}
   .card .cicon svg{width:27px;height:27px;}
+  .cur-card{display:flex;gap:16px;align-items:flex-start;padding:18px 22px;}
+  .cur-card .cicon{flex:0 0 46px;width:46px;height:46px;margin-bottom:0;border-radius:12px;}
+  .cur-card .cicon svg{width:24px;height:24px;}
+  .cur-card .k{margin-bottom:4px;}
+  .cur-card h3{margin-bottom:4px;}
+  .cur-card p{font-size:13.5px;line-height:1.55;}
+  .tools-strip{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--border);border-radius:14px;padding:13px 20px;background:var(--bg-soft);}
+  .tools-strip .tlabel{font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--primary);text-transform:uppercase;white-space:nowrap;}
+  .tools-strip .tchips{display:flex;gap:8px;flex-wrap:wrap;}
+  .tchip{font-size:13px;font-weight:600;color:#3F4A5A;background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 13px;}
 
   .stats{display:grid;gap:18px;margin-top:38px;}
   .stats.s3{grid-template-columns:repeat(3,1fr);}
@@ -296,23 +306,27 @@
       <div class="eyebrow">쉽게 · Easy</div>
       <h2 class="title">무엇을 만들까요? <span class="pt">4가지 제작 주제</span></h2>
       <p class="lead">수준과 목적에 맞춰 주제를 골라 조합합니다.</p>
-      <div class="grid grid-2" style="margin-top:24px;">
-        <div class="card">
+      <div class="grid grid-2" style="margin-top:20px;">
+        <div class="card cur-card">
           <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9 6.5h.01"/></svg></div>
-          <div class="k">01 · Web</div><h3>나만의 웹서비스 만들기</h3><p>홈페이지·포트폴리오·제안서 생성기 등 작동하는 웹서비스를 직접 만듭니다.</p>
+          <div><div class="k">01 · Web</div><h3>나만의 웹서비스 만들기</h3><p>홈페이지·포트폴리오·제안서 생성기 등 작동하는 웹서비스를 직접 만듭니다.</p></div>
         </div>
-        <div class="card">
+        <div class="card cur-card">
           <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2.5"/><path d="M12 8V4.5"/><circle cx="12" cy="3.5" r="1.2"/><path d="M9 13h.01M15 13h.01"/><path d="M2 13h2M20 13h2"/></svg></div>
-          <div class="k">02 · Agent</div><h3>나만의 AI 에이전트 만들기</h3><p>반복 업무를 대신 처리하는 나만의 업무 자동화 비서를 만듭니다.</p>
+          <div><div class="k">02 · Agent</div><h3>나만의 AI 에이전트 만들기</h3><p>반복 업무를 대신 처리하는 나만의 업무 자동화 비서를 만듭니다.</p></div>
         </div>
-        <div class="card">
+        <div class="card cur-card">
           <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="12" cy="18" r="2.6"/><path d="M8.4 7.6l2.6 8M15.6 7.6l-2.6 8M8.5 6h7"/></svg></div>
-          <div class="k">03 · Multi-agent</div><h3>멀티 에이전트 팀 만들기</h3><p>여러 에이전트로 구성된 'AI 팀'을 만들고 운영하는 법을 배웁니다.</p>
+          <div><div class="k">03 · Multi-agent</div><h3>멀티 에이전트 팀 만들기</h3><p>여러 에이전트로 구성된 'AI 팀'을 만들고 운영하는 법을 배웁니다.</p></div>
         </div>
-        <div class="card">
+        <div class="card cur-card">
           <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></div>
-          <div class="k">04 · Video</div><h3>AI 영상으로 릴스 만들기</h3><p>이미지·영상 생성 AI로 마케팅 릴스 콘텐츠를 직접 제작합니다.</p>
+          <div><div class="k">04 · Video</div><h3>AI 영상으로 릴스 만들기</h3><p>이미지·영상 생성 AI로 마케팅 릴스 콘텐츠를 직접 제작합니다.</p></div>
         </div>
+      </div>
+      <div class="tools-strip">
+        <span class="tlabel">사용 AI 툴</span>
+        <span class="tchips"><span class="tchip">Replit</span><span class="tchip">Claude Code</span><span class="tchip">Claude Cowork</span><span class="tchip">Gemini</span><span class="tchip">Google AI Studio</span><span class="tchip">Higgsfield</span></span>
       </div>
     </div>
   </section>
@@ -528,12 +542,20 @@
     <div class="slide-inner">
       <div class="eyebrow">Format</div>
       <h2 class="title"><span class="pt">3가지 형태</span>로, 상황에 맞게 운영합니다</h2>
-      <div class="rows">
-        <div class="row"><div class="tag">워크샵</div><div class="rtext"><h4>교육 + 실습 (2~4시간)</h4><p>핵심 개념부터 직접 제작까지, 한 번의 세션 안에서 끝내는 핸즈온 워크샵입니다.</p></div></div>
-        <div class="row"><div class="tag">해커톤</div><div class="rtext"><h4>제작 컴피티션 + 시상</h4><p>팀을 이뤄 결과물을 만들고 발표·시상까지 진행하는 빌드 행사입니다.</p></div></div>
-        <div class="row"><div class="tag">정기 교육</div><div class="rtext"><h4>커리큘럼 기반 정기 운영</h4><p>여러 제작 주제를 커리큘럼으로 묶어 정기적으로 역량을 쌓아 올립니다.</p></div></div>
+      <div class="grid grid-3" style="margin-top:30px;">
+        <div class="card">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4"/><path d="M8.5 20h7"/><path d="M7 10.5l2.3 2.3L13 9"/></svg></div>
+          <div class="k">2~4시간</div><h3>워크샵</h3><p>교육 + 실습. 핵심 개념부터 직접 제작까지, 한 번의 세션 안에서 끝내는 핸즈온.</p>
+        </div>
+        <div class="card">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v3.5a5 5 0 0 1-10 0z"/><path d="M7 5H4.2v1A3 3 0 0 0 7 9"/><path d="M17 5h2.8v1A3 3 0 0 1 17 9"/><path d="M12 13v3"/><path d="M9.5 20h5"/><path d="M10 20a2 2 0 0 1 4 0"/></svg></div>
+          <div class="k">컴피티션</div><h3>해커톤</h3><p>제작 컴피티션 + 시상. 팀을 이뤄 결과물을 만들고 발표·시상까지 진행합니다.</p>
+        </div>
+        <div class="card">
+          <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18"/><path d="M8 3v4M16 3v4"/><path d="M7.5 14h4"/><path d="M7.5 17.5h7"/></svg></div>
+          <div class="k">커리큘럼</div><h3>정기 교육</h3><p>커리큘럼 기반 정기 운영. 여러 제작 주제를 묶어 정기적으로 역량을 쌓습니다.</p>
+        </div>
       </div>
-      <div class="track-banner">✓ 더 깊이 만들고 싶다면 <b>&nbsp;Claude Code · Cowork 심화 과정(4시간)</b>&nbsp;으로 연계됩니다</div>
     </div>
   </section>
 
@@ -544,7 +566,7 @@
     <div class="slide-inner">
       <div class="accent-bar"></div>
       <div class="eyebrow">Contact</div>
-      <h1 style="font-size:clamp(30px,4.6vw,56px);">이제, 누구나 AI를 만듭니다.<br/>마켓핏랩이 함께합니다</h1>
+      <h1 style="font-size:clamp(30px,4.6vw,56px);">이제, 누구나 AI를 만들 수 있습니다.<br/>마켓핏랩이 함께합니다.</h1>
       <div class="contact-mail">
         <span>워크샵 도입 문의</span>
         <a href="mailto:replit@mfitlab.com">replit@mfitlab.com</a>
